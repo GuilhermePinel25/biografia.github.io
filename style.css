@@ -8,6 +8,8 @@ body {
   line-height: 1.6;
   color: var(--default-color);
   background-color: var(--background-color);
+  width: 100vw;  /* Garante que a largura do site não ultrapasse a tela */
+  overflow-x: hidden;  /* Remove rolagem horizontal */
 }
 
 /* Define que todas as seções ocupam toda a largura da tela */
@@ -36,6 +38,7 @@ header {
   background-color: #444;
   padding: 20px 0;
   text-align: center;
+  width: 100%;  /* Garante que o cabeçalho ocupe toda a largura */
 }
 
 /* Define a largura máxima da logo e centraliza */
@@ -51,6 +54,7 @@ header img {
 /* Define a largura do container para organizar os elementos */
 .container {
   width: 90%;
+  max-width: 1200px;  /* Limita a largura para evitar excesso em telas grandes */
   margin: auto;
 }
 
@@ -146,7 +150,7 @@ header img {
   font-size: 32px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
-  color: #ff0000 !important; /* Força a cor vermelha */
+  color: #ff0000 !important;
   text-transform: uppercase;
   position: relative;
   margin-bottom: 15px;
@@ -177,19 +181,6 @@ header img {
   left: 50%;
   transform: translateX(-50%);
   bottom: -11px;
-}
-
-/* 🔹🔹🔹 ANIMAÇÃO DOS TÍTULOS 🔹🔹🔹 */
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* 🔹🔹🔹 SEÇÃO DE TRABALHOS 🔹🔹🔹 */
@@ -230,6 +221,7 @@ footer {
   padding: 20px;
   background: #444;
   color: white;
+  width: 100%; /* Garante que o rodapé ocupe toda a largura */
 }
 
 /* Estilização dos links do rodapé */
