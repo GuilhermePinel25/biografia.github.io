@@ -1,0 +1,333 @@
+/* 🔹🔹🔹 ESTILIZAÇÃO GERAL 🔹🔹🔹
+
+/* Define a fonte padrão do site e estilos gerais */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--default-color);
+  background-color: var(--background-color);
+}
+
+/* Garante que o site nunca ultrapasse a largura da tela */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Remove qualquer rolagem horizontal */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--default-color);
+  background-color: var(--background-color);
+}
+
+/* Garante que todas as seções ocupem toda a largura */
+section {
+  width: 100%;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+/* 🔹🔹🔹 ESTILIZAÇÃO DOS FUNDOS 🔹🔹🔹 */
+
+/* Fundo claro para a seção de biografia */
+.light-background {
+  background-color: rgba(230, 230, 255, 0.9);
+}
+
+/* Fundo escuro para a seção de trabalhos */
+.dark-background {
+  background-color: #252525;
+  color: #ffffff;
+}
+
+/* 🔹🔹🔹 ESTILIZAÇÃO DO HEADER 🔹🔹🔹 */
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #444;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Define a largura máxima da logo e centraliza */
+header img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 🔹🔹🔹 CONFIGURAÇÕES DO CONTAINER 🔹🔹🔹 */
+
+/* Define a largura do container para organizar os elementos */
+.container {
+  width: 90%;
+  max-width: 1200px;  /* Evita que fique grande demais */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 🔹🔹🔹 SEÇÃO DE APRESENTAÇÃO 🔹🔹🔹 */
+
+/* Define o layout da seção de apresentação */
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap; /* Permite ajuste para telas menores */
+}
+
+/* 🔹🔹🔹 SEÇÃO DE APRESENTAÇÃO 🔹🔹🔹 */
+
+/* Define o layout da seção de apresentação */
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Configuração da imagem do perfil */
+.profile {
+  text-align: left;
+  margin-left: 90px;
+}
+
+.profile img {
+  width: 220px;
+  height: 280px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de zoom ao passar o mouse na imagem */
+.profile img:hover {
+  transform: scale(1.1);
+}
+
+/* Configuração do nome da pessoa */
+.profile h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+/* Configuração do link */
+.profile h3 a {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #777;
+  text-decoration: none;
+}
+
+/* Muda a cor do link ao passar o mouse */
+.profile h3 a:hover {
+  color: #ff0000;
+}
+
+/* 🔹🔹🔹 ESTILIZAÇÃO DA DESCRIÇÃO 🔹🔹🔹 */
+
+/* Define a largura máxima e alinhamento da descrição */
+.description {
+  max-width: 600px;
+  margin-right: 90px;
+  text-align: justify;
+}
+
+/* Margem entre os parágrafos */
+.description p {
+  margin-top: 15px;
+}
+
+/* Remove a margem superior do primeiro parágrafo para alinhamento */
+.description p:first-of-type {
+  margin-top: 0;
+}
+
+/* 🔹🔹🔹 ESTILIZAÇÃO DOS TÍTULOS DAS SEÇÕES 🔹🔹🔹 */
+
+/* Estilo base para os títulos das seções */
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* Aplica animação em todos os títulos das seções */
+#biografia .section-title,
+#trabalhos .section-title {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* Estilo do texto do título */
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  color: #ff0000 !important; /* Força a cor vermelha */
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* 🔹🔹🔹 LINHAS DECORATIVAS ABAIXO DOS TÍTULOS 🔹🔹🔹 */
+
+/* Linha cinza inferior */
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+
+/* Linha vermelha sobreposta */
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #ff0000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -11px;
+}
+
+/* 🔹🔹🔹 ANIMAÇÃO DOS TÍTULOS 🔹🔹🔹 */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔹🔹🔹 SEÇÃO DE TRABALHOS 🔹🔹🔹 */
+
+/* Define o layout do mosaico */
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Ajuste das imagens e vídeos do mosaico */
+.mosaic-item {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+}
+
+/* Garante que imagens e vídeos se ajustem corretamente */
+.mosaic-item img,
+.mosaic-item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Rodapé ocupa toda a largura da tela */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #444;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilização dos links do rodapé */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 🔹🔹🔹 MEDIA QUERIES PARA RESPONSIVIDADE 🔹🔹🔹 */
+
+/* 📌 Ajustes para telas menores que 1024px (Tablets) */
+@media screen and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .description {
+    max-width: 90%;
+    margin-right: 0;
+  }
+
+  .mosaic {
+    grid-template-columns: repeat(1, 1fr); /* Mosaico 1x4 em telas menores */
+  }
+}
+
+/* 📌 Ajustes para telas menores que 768px (Celulares) */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+
+  .profile img {
+    width: 180px;
+    height: auto;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .mosaic {
+    grid-template-columns: repeat(1, 1fr); /* Imagens empilhadas em telas pequenas */
+  }
+
+  .mosaic-item {
+    padding-top: 56.25%; /* Ajusta para manter proporção 16:9 em celulares */
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
