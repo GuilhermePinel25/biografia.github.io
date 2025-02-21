@@ -95,7 +95,21 @@ header img {
 .profile {
   text-align: left;
   margin-left: 90px;
+  position: relative;
 }
+
+.profile::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 220px; /* Mesma largura da imagem */
+  height: 280px; /* Mesma altura da imagem */
+  background-color: rgba(0, 0, 0, 1); /* Cor do fundo (pode ajustar) */
+  z-index: -1; /* Posiciona atrás da imagem */
+  border-radius: 5px; /* Mesma borda arredondada da imagem */
+}
+
 
 .profile img {
   width: 220px;
